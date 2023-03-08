@@ -3,10 +3,10 @@ kind: Deployment
 metadata:
   labels:
     app: webserver
-  name: webserver
+  name: webserver-deployment
   namespace: application
 spec:
-  replicas: 2
+  replicas: 3
   selector:
     matchLabels:
       app: webserver
@@ -28,7 +28,7 @@ kind: Service
 metadata:
   labels:
     app: webserver
-  name: webserver
+  name: webserver-service
   namespace: application
 spec:
   ports:
